@@ -1,4 +1,4 @@
-.idea
+/.idea
 *.egg-info
 *.pot
 *.py[co]
