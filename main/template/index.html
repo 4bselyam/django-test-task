@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid mt-2">
+        <h1 class="text-center">Sign Up & Login User API (JWT Token)</h1>
+        <hr>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Action</th>
+                <th scope="col">URL</th>
+                <th scope="col">Method</th>
+                <th scope="col">Variables</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Register new user</td>
+                <td><a href="http://{{ host }}/auth/users/">http://{{ host }}/auth/users/</a></td>
+                <td>POST</td>
+                <td>username, email, password</td>
+            </tr>
+            <tr>
+                <td>Get access token</td>
+                <td><a href="http://{{ host }}/auth/jwt/create/">http://{{ host }}/auth/jwt/create/</a></td>
+                <td>POST</td>
+                <td>username, password</td>
+            </tr>
+            <tr>
+                <td>Get or update user</td>
+                <td><a href="http://{{ host }}/auth/users/me/">http://{{ host }}/auth/users/me/</a></td>
+                <td>GET</td>
+                <td>You need your JWT token</td>
+            </tr>
+            <tr>
+                <td>Get all users</td>
+                <td><a href="http://{{ host }}/api/accounts/all-profiles">http://{{ host }}/api/accounts/all-profiles</a></td>
+                <td>GET</td>
+                <td>You need your JWT token</td>
+            </tr>
+            <tr>
+                <td>Update authenticated user</td>
+                <td><a href="http://{{ host }}/api/accounts/profile/[id]">http://{{ host }}/api/accounts/profile/[id]</a></td>
+                <td>PUT</td>
+                <td>You need your JWT token. And you can update what you want</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
