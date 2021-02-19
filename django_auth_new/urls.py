@@ -18,10 +18,15 @@ from django.urls import path, include
 
 from main.views import index
 
+apipatterns = [
+    path('', include('posts.api.urls'))
+]
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
     path('api/accounts/', include('accounts.urls')),
-    path('', index, name='home')
+    path('', index, name='home'),
+    path('api/v1/', include((apipatterns, 'api'), namespace=None)),
 ]
