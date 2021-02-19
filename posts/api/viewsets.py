@@ -6,7 +6,7 @@ from .serializers import PostSerializer
 from likes.api.mixins import LikedMixin
 
 
-class TweetViewSet(LikedMixin, viewsets.ModelViewSet):
+class PostViewSet(LikedMixin, viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = (IsAuthenticatedOrReadOnly,)

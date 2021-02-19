@@ -1,8 +1,8 @@
 from rest_framework.routers import DefaultRouter
 
-from .viewsets import TweetViewSet
+from .viewsets import PostViewSet
 
 router = DefaultRouter()
-router.register(r'tweets', TweetViewSet)
+router.register(r'posts', PostViewSet)
 
 urlpatterns = router.urls

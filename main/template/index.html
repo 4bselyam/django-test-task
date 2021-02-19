@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="container-fluid mt-2">
-        <h1 class="text-center">Sign Up & Login User API (JWT Token)</h1>
+        <h1 class="text-center">REST API</h1>
         <table class="table">
             <thead>
             <tr>
@@ -33,15 +33,56 @@
             </tr>
             <tr>
                 <td>Get all users</td>
-                <td><a href="http://{{ host }}/api/accounts/all-profiles">http://{{ host }}/api/accounts/all-profiles</a></td>
+                <td>
+                    <a href="http://{{ host }}/api/accounts/all-profiles">http://{{ host }}/api/accounts/all-profiles</a>
+                </td>
                 <td>GET</td>
                 <td><span class="badge bg-warning text-dark">You need JWT token</span></td>
             </tr>
             <tr>
                 <td>Update authenticated user</td>
-                <td><a href="http://{{ host }}/api/accounts/profile/[id]">http://{{ host }}/api/accounts/profile/[id]</a></td>
+                <td>
+                    <a href="http://{{ host }}/api/accounts/profile/[id]">http://{{ host }}/api/accounts/profile/[id]</a>
+                </td>
                 <td>PUT</td>
-                <td>description, location, is_creator | <span class="badge bg-warning text-dark">You need JWT token</span></td>
+                <td>description, location, is_creator | <span
+                        class="badge bg-warning text-dark">You need JWT token</span></td>
+            </tr>
+            <tr>
+                <td>Create post</td>
+                <td><a href="http://{{ host }}/api/v1/posts/">http://{{ host }}/api/v1/posts/</a></td>
+                <td>POST</td>
+                <td>body | <span class="badge bg-warning text-dark">You need JWT token</span></td>
+            </tr>
+            <tr>
+                <td>Like post</td>
+                <td><a href="http://{{ host }}/api/v1/posts/[id]/like">http://{{ host }}/api/v1/posts/[id]/like</a></td>
+                <td>POST</td>
+                <td><span class="badge bg-warning text-dark">You need JWT token</span></td>
+            </tr>
+            <tr>
+                <td>Get info about post</td>
+                <td><a href="http://{{ host }}/api/v1/posts/[id]">http://{{ host }}/api/v1/posts/[id]</a></td>
+                <td>GET</td>
+                <td>Nothing</td>
+            </tr>
+            <tr>
+                <td>Become a fan of the post</td>
+                <td><a href="http://{{ host }}/api/v1/posts/[id]">http://{{ host }}/api/v1/posts/[id]</a></td>
+                <td>GET</td>
+                <td><span class="badge bg-warning text-dark">You need JWT token</span></td>
+            </tr>
+            <tr>
+                <td>Get users, who liked post</td>
+                <td><a href="http://{{ host }}/api/v1/posts/[id]/fans">http://{{ host }}/api/v1/posts/[id]/fans</a></td>
+                <td>GET</td>
+                <td><span class="badge bg-warning text-dark">You need JWT token</span></td>
+            </tr>
+            <tr>
+                <td>Romve like</td>
+                <td><a href="http://{{ host }}/api/v1/posts/[id]/unlike/">http://{{ host }}/api/v1/posts/[id]/unlike/</a></td>
+                <td>POST</td>
+                <td><span class="badge bg-warning text-dark">You need JWT token</span></td>
             </tr>
             </tbody>
         </table>
