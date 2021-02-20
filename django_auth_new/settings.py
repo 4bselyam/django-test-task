@@ -66,7 +66,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR / 'templates',
-            'D:/Practice/Python/django_auth_new/main/template'
+            '/home/ahmed/PycharmProjects/django-test-task/main/template'
         ],
         'APP_DIRS': True,
         'OPTIONS': {
