@@ -15,26 +15,26 @@
             <tbody>
             <tr>
                 <td>Register new user</td>
-                <td><a href="http://{{ host }}/auth/users/">http://{{ host }}/auth/users/</a></td>
+                <td><a href="http://{{ host }}/api/v1/auth/users/">http://{{ host }}/api/v1/auth/users/</a></td>
                 <td>POST</td>
                 <td>username, email, password</td>
             </tr>
             <tr>
                 <td>Get access token</td>
-                <td><a href="http://{{ host }}/auth/jwt/create/">http://{{ host }}/auth/jwt/create/</a></td>
+                <td><a href="http://{{ host }}/api/v1/auth/jwt/create/">http://{{ host }}/api/v1/auth/jwt/create/</a></td>
                 <td>POST</td>
                 <td>username, password</td>
             </tr>
             <tr>
-                <td>Get user</td>
-                <td><a href="http://{{ host }}/auth/users/me/">http://{{ host }}/auth/users/me/</a></td>
+                <td>Get your user</td>
+                <td><a href="http://{{ host }}/api/v1/auth/users/me/">http://{{ host }}/api/v1/auth/users/me/</a></td>
                 <td>GET</td>
                 <td><span class="badge bg-warning text-dark">You need JWT token</span></td>
             </tr>
             <tr>
                 <td>Get all users</td>
                 <td>
-                    <a href="http://{{ host }}/api/accounts/all-profiles">http://{{ host }}/api/accounts/all-profiles</a>
+                    <a href="http://{{ host }}/api/v1/accounts/all-profiles">http://{{ host }}/api/v1/accounts/all-profiles</a>
                 </td>
                 <td>GET</td>
                 <td><span class="badge bg-warning text-dark">You need JWT token</span></td>
@@ -42,7 +42,7 @@
             <tr>
                 <td>Update authenticated user</td>
                 <td>
-                    <a href="http://{{ host }}/api/accounts/profile/[id]">http://{{ host }}/api/accounts/profile/[id]</a>
+                    <a href="http://{{ host }}/api/v1/accounts/profile/[id]">http://{{ host }}/api/v1/accounts/profile/[id]</a>
                 </td>
                 <td>PUT</td>
                 <td>description, location, is_creator | <span
@@ -79,7 +79,7 @@
                 <td><span class="badge bg-warning text-dark">You need JWT token</span></td>
             </tr>
             <tr>
-                <td>Romve like</td>
+                <td>Remove like</td>
                 <td><a href="http://{{ host }}/api/v1/posts/[id]/unlike/">http://{{ host }}/api/v1/posts/[id]/unlike/</a></td>
                 <td>POST</td>
                 <td><span class="badge bg-warning text-dark">You need JWT token</span></td>

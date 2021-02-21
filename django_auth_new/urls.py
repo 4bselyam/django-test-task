@@ -24,9 +24,9 @@ apipatterns = [
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/', include('djoser.urls')),
-    path('auth/', include('djoser.urls.jwt')),
-    path('api/accounts/', include('accounts.urls')),
+    path('api/v1/auth/', include('djoser.urls')),
+    path('api/v1/auth/', include('djoser.urls.jwt')),
+    path('api/v1/accounts/', include('accounts.urls')),
     path('', index, name='home'),
     path('api/v1/', include((apipatterns, 'api'), namespace=None)),
 ]
